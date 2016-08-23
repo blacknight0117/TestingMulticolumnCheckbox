@@ -11,11 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class CheckboxAdapter extends ArrayAdapter {
-    Model[] modelItems = null;
+    ArrayList<Model> modelItems = new ArrayList<Model>();
     Context context;
 
-    public CheckboxAdapter(Context context, Model[] resource) {
+    public CheckboxAdapter(Context context, ArrayList<Model> resource) {
         super(context, R.layout.colmn_row, resource);
         // TODO Auto-generated constructor stub
         this.context = context;
@@ -32,12 +34,12 @@ public class CheckboxAdapter extends ArrayAdapter {
         TextView gender = (TextView) convertView.findViewById(R.id.gender);
         TextView status = (TextView) convertView.findViewById(R.id.status);
         CheckBox cb = (CheckBox) convertView.findViewById(R.id.checkBox1);
-        name.setText(modelItems[position].getName());
-        age.setText(modelItems[position].getAge());
-        gender.setText(modelItems[position].getGender());
-        status.setText(modelItems[position].getStatus());
+        name.setText(modelItems.get(position).getName());
+        age.setText(modelItems.get(position).getAge());
+        gender.setText(modelItems.get(position).getGender());
+        status.setText(modelItems.get(position).getStatus());
 
-        if (modelItems[position].getValue() == 1)
+        if (modelItems.get(position).getValue() == 1)
             cb.setChecked(true);
         else
             cb.setChecked(false);

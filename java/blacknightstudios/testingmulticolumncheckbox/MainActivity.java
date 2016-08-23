@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
     private ArrayList<HashMap<String, String>> list;
 
     ListView lv;
-    Model[] modelItems;
+    ArrayList<Model> modelItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,22 +31,21 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         lv = (ListView) findViewById(R.id.listView1);
-        modelItems = new Model[15];
-        modelItems[0] = new Model(0, "Black", "Male", "26", "Single");
-        modelItems[1] = new Model(1, "String", "Male", "22", "Married");
-        modelItems[2] = new Model(1, "Cheese", "Female", "24", "Married");
-        modelItems[3] = new Model(0, "Knight", "Male", "26", "Single");
-        modelItems[4] = new Model(1, "Shaaka", "Male", "26", "Single");
-        modelItems[5] = new Model(0, "Black", "Male", "26", "Single");
-        modelItems[6] = new Model(1, "String", "Male", "22", "Married");
-        modelItems[7] = new Model(1, "Cheese", "Female", "24", "Married");
-        modelItems[8] = new Model(0, "Knight", "Male", "26", "Single");
-        modelItems[9] = new Model(1, "Shaaka", "Male", "26", "Single");
-        modelItems[10] = new Model(0, "Black", "Male", "26", "Single");
-        modelItems[11] = new Model(1, "String", "Male", "22", "Married");
-        modelItems[12] = new Model(1, "Cheese", "Female", "24", "Married");
-        modelItems[13] = new Model(0, "Knight", "Male", "26", "Single");
-        modelItems[14] = new Model(1, "Shaaka", "Male", "26", "Single");
+        modelItems.add(new Model(0, "Black", "Male", "26", "Single"));
+        modelItems.add(new Model(1, "String", "Male", "22", "Married"));
+        modelItems.add(new Model(1, "Cheese", "Female", "24", "Married"));
+        modelItems.add(new Model(0, "Knight", "Male", "26", "Single"));
+        modelItems.add(new Model(1, "Shaaka", "Male", "26", "Single"));
+        modelItems.add(new Model(0, "Black", "Male", "26", "Single"));
+        modelItems.add(new Model(1, "String", "Male", "22", "Married"));
+        modelItems.add(new Model(1, "Cheese", "Female", "24", "Married"));
+        modelItems.add(new Model(0, "Knight", "Male", "26", "Single"));
+        modelItems.add(new Model(1, "Shaaka", "Male", "26", "Single"));
+        modelItems.add(new Model(0, "Black", "Male", "26", "Single"));
+        modelItems.add(new Model(1, "String", "Male", "22", "Married"));
+        modelItems.add(new Model(1, "Cheese", "Female", "24", "Married"));
+        modelItems.add(new Model(0, "Knight", "Male", "26", "Single"));
+        modelItems.add(new Model(1, "Shaaka", "Male", "26", "Single"));
         CheckboxAdapter adapter = new CheckboxAdapter(this, modelItems);
         lv.setAdapter(adapter);
     }
