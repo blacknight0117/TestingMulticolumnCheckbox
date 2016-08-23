@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
     private ArrayList<HashMap<String, String>> list;
 
     ListView lv;
-    ArrayList<Model> modelItems;
+    ArrayList<Model> modelItems= new ArrayList<Model>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
